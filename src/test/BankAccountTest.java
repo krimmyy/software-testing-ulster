@@ -1,3 +1,7 @@
+package test;
+
+import main.BankAccount;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,14 +10,14 @@ public class BankAccountTest {
     @Test
     void testInitialBalance() {
         BankAccount account = new BankAccount(1000);
-        assertEquals(1000, account.getBankBalance());
+        Assertions.assertEquals(1000, account.getBankBalance());
     }
 
     @Test
     void testDepositValidAmount() {
         BankAccount account = new BankAccount(5000);
         account.deposit(1500);
-        assertEquals(6500, account.getBankBalance());
+        Assertions.assertEquals(6500, account.getBankBalance());
     }
 
     @Test
@@ -28,7 +32,7 @@ public class BankAccountTest {
     void testWithdrawalValidAmount() {
         BankAccount account = new BankAccount(3000);
         account.withdraw(650);
-        assertEquals(2350, account.getBankBalance());
+        Assertions.assertEquals(2350, account.getBankBalance());
     }
 
     @Test
@@ -52,7 +56,7 @@ public class BankAccountTest {
         BankAccount account = new BankAccount(1000);
         account.withdraw(800);
         account.withdraw(250);
-        assertEquals(200, account.getBankBalance());
+        Assertions.assertEquals(200, account.getBankBalance());
     }
 
     @Test

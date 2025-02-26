@@ -1,3 +1,6 @@
+package test;
+
+import main.Money;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.api.Assertions;
@@ -29,7 +32,7 @@ public class MoneyTest {
         Money money2 = new Money(5, "USD");
 
         Money result = money1.add(money2);
-        assertEquals(15, result.getAmount());
+        Assertions.assertEquals(15, result.getAmount());
         assertEquals("USD", result.getCurrency());
     }
 
@@ -60,6 +63,6 @@ public class MoneyTest {
     @Test
     void testMoneyToString() {
         Money money = new Money(100, "EUR");
-        assertEquals("Money{amount=100, currency='USD'}", money.toString());
+        assertEquals("main.Money{amount=100, currency='USD'}", money.toString());
         }
     }

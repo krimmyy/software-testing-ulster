@@ -1,3 +1,5 @@
+package main;
+
 public class Money {
     private final int amount;
     private final String currency;
@@ -34,6 +36,6 @@ public class Money {
 
     @Override
     public String toString() {
-        return "Money{" + "amount=" + amount + ", currency='" + currency + '\'' + '}';
+        return "main.Money{" + "amount=" + amount + ", currency='" + currency + '\'' + '}';
     }
 }

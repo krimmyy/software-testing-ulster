@@ -1,3 +1,5 @@
+package main;
+
 public class Sorting {
 
     public static int[] sortArray(int[] array) {
